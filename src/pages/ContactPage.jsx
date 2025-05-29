@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationModal from "../components/ApplicationModal";
@@ -50,7 +51,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="row g-4">
             {contactInfo.map((info, index) => (
-              <div key={index} className="col-md-6 col-lg-3">
+              <div key={index} className="col-md-6 col-lg-4">
                 <div className="card text-center p-4 border-0 shadow-sm h-100">
                   <i
                     className={`${info.icon} text-danger mb-3`}
