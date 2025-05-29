@@ -1,10 +1,10 @@
-import { useState } from "react"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import ApplicationModal from "../components/ApplicationModal"
+import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import ApplicationModal from "../components/ApplicationModal";
 
 export default function CoursesPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const programs = [
     {
@@ -14,7 +14,8 @@ export default function CoursesPage() {
           name: "B.Tech Computer Science",
           duration: "4 Years",
           seats: "120",
-          description: "Comprehensive program covering software development, AI, and emerging technologies",
+          description:
+            "Comprehensive program covering software development, AI, and emerging technologies",
         },
         {
           name: "B.Tech Mechanical",
@@ -26,7 +27,8 @@ export default function CoursesPage() {
           name: "B.Tech Civil",
           duration: "4 Years",
           seats: "60",
-          description: "Infrastructure development and construction engineering",
+          description:
+            "Infrastructure development and construction engineering",
         },
       ],
     },
@@ -81,7 +83,7 @@ export default function CoursesPage() {
         },
       ],
     },
-  ]
+  ];
 
   return (
     <div className="min-vh-100">
@@ -92,7 +94,8 @@ export default function CoursesPage() {
         <div className="container text-center py-5">
           <h1 className="display-4 fw-bold mb-4">Our Programs</h1>
           <p className="fs-5 mx-auto" style={{ maxWidth: "700px" }}>
-            Discover our comprehensive range of undergraduate and postgraduate programs designed to shape future leaders
+            Discover our comprehensive range of undergraduate and postgraduate
+            programs designed to shape future leaders
           </p>
         </div>
       </section>
@@ -102,7 +105,9 @@ export default function CoursesPage() {
         <div className="container">
           {programs.map((program, index) => (
             <div key={index} className="mb-5">
-              <h2 className="display-6 fw-bold text-dark mb-4 text-center">{program.category}</h2>
+              <h2 className="display-6 fw-bold text-dark mb-4 text-center">
+                {program.category}
+              </h2>
               <div className="row g-4">
                 {program.courses.map((course, courseIndex) => (
                   <div key={courseIndex} className="col-md-6 col-lg-4">
@@ -122,7 +127,10 @@ export default function CoursesPage() {
                             Seats: {course.seats}
                           </div>
                         </div>
-                        <button className="btn btn-danger w-100" onClick={() => setIsModalOpen(true)}>
+                        <button
+                          className="btn btn-danger w-100"
+                          onClick={() => setIsModalOpen(true)}
+                        >
                           Apply Now
                         </button>
                       </div>
@@ -139,8 +147,12 @@ export default function CoursesPage() {
       <section className="py-5 bg-light">
         <div className="container">
           <div className="text-center mb-5">
-            <h2 className="display-5 fw-bold text-dark mb-3">Program Features</h2>
-            <p className="fs-5 text-muted">What makes our programs exceptional</p>
+            <h2 className="display-5 fw-bold text-dark mb-3">
+              Program Features
+            </h2>
+            <p className="fs-5 text-muted">
+              What makes our programs exceptional
+            </p>
           </div>
           <div className="row g-4">
             {[
@@ -152,7 +164,8 @@ export default function CoursesPage() {
               {
                 icon: "fas fa-users",
                 title: "Expert Faculty",
-                description: "Learn from experienced professionals and academicians",
+                description:
+                  "Learn from experienced professionals and academicians",
               },
               {
                 icon: "fas fa-award",
@@ -167,7 +180,10 @@ export default function CoursesPage() {
             ].map((feature, index) => (
               <div key={index} className="col-md-6 col-lg-3">
                 <div className="card text-center p-4 border-0 shadow-sm h-100">
-                  <i className={`${feature.icon} text-danger mb-3`} style={{ fontSize: "3rem" }}></i>
+                  <i
+                    className={`${feature.icon} text-danger mb-3`}
+                    style={{ fontSize: "3rem" }}
+                  ></i>
                   <h5 className="fw-semibold mb-3">{feature.title}</h5>
                   <p className="text-muted small">{feature.description}</p>
                 </div>
@@ -178,7 +194,10 @@ export default function CoursesPage() {
       </section>
 
       <Footer />
-      <ApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <ApplicationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
-  )
+  );
 }
