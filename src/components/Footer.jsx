@@ -107,16 +107,11 @@ export default function Footer() {
               <i className="fas fa-phone text-danger me-3"></i>
               <span className="text-light">+91-8485929697</span>
             </div>
-            <div className="d-flex align-items-center">
-              <i className="fas fa-envelope text-danger me-3"></i>
-              <span className="text-light">info@ppsu.ac.in</span>
-            </div>
           </div>
         </div>
-
         <hr className="border-secondary my-4" />
         <div className="text-center">
-          <p className="text-secondary mb-0">© 2025 P P Savani University. All rights reserved.</p>
+          <p className="text-secondary mb-0">© 2025 Eternity. All rights reserved.</p>
         </div>
       </div>
     </footer>
