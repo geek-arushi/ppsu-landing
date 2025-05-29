@@ -1,22 +1,9 @@
-import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ApplicationModal from "../components/ApplicationModal";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
-  });
-
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleSubmit = (formData) => {
-    console.log("Contact form submitted:", formData);
-  };
 
   const contactInfo = [
     {

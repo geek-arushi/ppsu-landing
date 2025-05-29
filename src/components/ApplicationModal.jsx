@@ -1,103 +1,28 @@
-import { useState } from "react"
-import ApplicationForm from "./ApplicationForm"
+import { useState } from "react";
+import ApplicationForm from "./ApplicationForm";
 
 export default function ApplicationModal({ isOpen, onClose }) {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    address: "",
-    state: "",
-    course: "",
-    previousEducation: "",
-    message: "",
-  })
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (formData) => {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    console.log("Application submitted:", formData)
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+    console.log("Application submitted:", formData);
+    setIsSubmitting(false);
+    setIsSubmitted(true);
 
-    // Reset form after 3 seconds and close modal
+    // Reset and close modal after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        address: "",
-        state: "",
-        course: "",
-        previousEducation: "",
-        message: "",
-      })
-      onClose()
-    }, 3000)
-  }
+      setIsSubmitted(false);
+      onClose();
+    }, 3000);
+  };
 
-  const states = [
-    "Andhra Pradesh",
-    "Arunachal Pradesh",
-    "Assam",
-    "Bihar",
-    "Chhattisgarh",
-    "Goa",
-    "Gujarat",
-    "Haryana",
-    "Himachal Pradesh",
-    "Jharkhand",
-    "Karnataka",
-    "Kerala",
-    "Madhya Pradesh",
-    "Maharashtra",
-    "Manipur",
-    "Meghalaya",
-    "Mizoram",
-    "Nagaland",
-    "Odisha",
-    "Punjab",
-    "Rajasthan",
-    "Sikkim",
-    "Tamil Nadu",
-    "Telangana",
-    "Tripura",
-    "Uttar Pradesh",
-    "Uttarakhand",
-    "West Bengal",
-  ]
-
-  const courses = [
-    "B.Tech Computer Science",
-    "B.Tech Mechanical",
-    "B.Tech Civil",
-    "B.Tech Electrical",
-    "MBA",
-    "BBA",
-    "B.Pharma",
-    "M.Pharma",
-    "BCA",
-    "MCA",
-    "B.Com",
-    "M.Com",
-    "B.Sc",
-    "M.Sc",
-    "BA",
-    "MA",
-    "LLB",
-    "LLM",
-  ]
-
-  if (!isOpen) return null
+  if (!isOpen) return null;
 
   if (isSubmitted) {
     return (
@@ -121,7 +46,7 @@ export default function ApplicationModal({ isOpen, onClose }) {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -142,5 +67,5 @@ export default function ApplicationModal({ isOpen, onClose }) {
         </div>
       </div>
     </div>
-  )
+  );
 }

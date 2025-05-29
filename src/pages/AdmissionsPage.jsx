@@ -1,21 +1,8 @@
-import { useState } from "react"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import AdmissionsForm from "../components/AdmissionsForm"
 
 export default function AdmissionsPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    address: "",
-    state: "",
-    course: "",
-    previousEducation: "",
-    message: "",
-  })
-
   const handleSubmit = (formData) => {
     console.log("Application submitted:", formData)
   }
@@ -50,58 +37,6 @@ export default function AdmissionsPage() {
     { event: "Result Declaration", date: "June 30, 2025" },
     { event: "Admission Confirmation", date: "July 15, 2025" },
     { event: "Classes Begin", date: "August 1, 2025" },
-  ]
-
-  const states = [
-    "Andhra Pradesh",
-    "Arunachal Pradesh",
-    "Assam",
-    "Bihar",
-    "Chhattisgarh",
-    "Goa",
-    "Gujarat",
-    "Haryana",
-    "Himachal Pradesh",
-    "Jharkhand",
-    "Karnataka",
-    "Kerala",
-    "Madhya Pradesh",
-    "Maharashtra",
-    "Manipur",
-    "Meghalaya",
-    "Mizoram",
-    "Nagaland",
-    "Odisha",
-    "Punjab",
-    "Rajasthan",
-    "Sikkim",
-    "Tamil Nadu",
-    "Telangana",
-    "Tripura",
-    "Uttar Pradesh",
-    "Uttarakhand",
-    "West Bengal",
-  ]
-
-  const courses = [
-    "B.Tech Computer Science",
-    "B.Tech Mechanical",
-    "B.Tech Civil",
-    "B.Tech Electrical",
-    "MBA",
-    "BBA",
-    "B.Pharma",
-    "M.Pharma",
-    "BCA",
-    "MCA",
-    "B.Com",
-    "M.Com",
-    "B.Sc",
-    "M.Sc",
-    "BA",
-    "MA",
-    "LLB",
-    "LLM",
   ]
 
   return (

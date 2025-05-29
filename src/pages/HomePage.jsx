@@ -1,30 +1,23 @@
-import { useState } from "react"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import ApplicationModal from "../components/ApplicationModal"
-import HomePageForm from "../components/HomePageForm"
+import { useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import ApplicationModal from "../components/ApplicationModal";
+import HomePageForm from "../components/HomePageForm";
 
 export default function HomePage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    state: "",
-    course: "",
-  })
-
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = (formData) => {
-    console.log("Form submitted:", formData)
-  }
+    console.log("Form submitted:", formData);
+    // Handle form submission logic here
+  };
 
   const stats = [
     { icon: "fas fa-graduation-cap", label: "Students", value: "10,000+" },
     { icon: "fas fa-users", label: "Faculty", value: "500+" },
     { icon: "fas fa-award", label: "Programs", value: "50+" },
     { icon: "fas fa-book-open", label: "Research Projects", value: "200+" },
-  ]
+  ];
 
   const features = [
     {
@@ -42,57 +35,7 @@ export default function HomePage() {
       description: "Strong connections with leading companies for placements",
       icon: "fas fa-book-open",
     },
-  ]
-
-  const states = [
-    "Andhra Pradesh",
-    "Arunachal Pradesh",
-    "Assam",
-    "Bihar",
-    "Chhattisgarh",
-    "Goa",
-    "Gujarat",
-    "Haryana",
-    "Himachal Pradesh",
-    "Jharkhand",
-    "Karnataka",
-    "Kerala",
-    "Madhya Pradesh",
-    "Maharashtra",
-    "Manipur",
-    "Meghalaya",
-    "Mizoram",
-    "Nagaland",
-    "Odisha",
-    "Punjab",
-    "Rajasthan",
-    "Sikkim",
-    "Tamil Nadu",
-    "Telangana",
-    "Tripura",
-    "Uttar Pradesh",
-    "Uttarakhand",
-    "West Bengal",
-  ]
-
-  const courses = [
-    "B.Tech",
-    "M.Tech",
-    "MBA",
-    "BBA",
-    "B.Com",
-    "M.Com",
-    "B.Sc",
-    "M.Sc",
-    "BA",
-    "MA",
-    "B.Pharma",
-    "M.Pharma",
-    "BCA",
-    "MCA",
-    "LLB",
-    "LLM",
-  ]
+  ];
 
   return (
     <div className="min-vh-100">
@@ -111,7 +54,7 @@ export default function HomePage() {
           <source src="/drone-view.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        
+
         <div
           className="position-absolute top-0 start-0 w-100 h-100"
           style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
@@ -213,5 +156,5 @@ export default function HomePage() {
       <Footer />
       <ApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
-  )
+  );
 }
