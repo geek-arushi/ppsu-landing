@@ -22,7 +22,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="navbar-brand d-flex align-items-center">
             <img 
-              src="/PPSUNAACA+Logo.png" 
+              src="/PPSUNAACALogo.png" 
               alt="PPSU Logo" 
               className="me-3" 
               style={{ height: "60px" }} 

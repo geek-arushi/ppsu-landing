@@ -108,7 +108,7 @@ export default function HomePage() {
           loop 
           style={{ zIndex: -1 }}
         >
-          <source src="/drone view.webm" type="video/webm" />
+          <source src="/drone-view.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
         

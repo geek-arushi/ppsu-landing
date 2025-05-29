@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export default function ApplicationForm({ onSubmit, isSubmitting }) {
   const [formData, setFormData] = useState({
@@ -11,12 +11,12 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
     course: "",
     previousEducation: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    onSubmit(formData)
-  }
+    e.preventDefault();
+    onSubmit(formData);
+  };
 
   const states = [
     "Andhra Pradesh",
@@ -47,7 +47,7 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
     "Uttar Pradesh",
     "Uttarakhand",
     "West Bengal",
-  ]
+  ];
 
   const courses = [
     "B.Tech Computer Science",
@@ -68,7 +68,7 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
     "MA",
     "LLB",
     "LLM",
-  ]
+  ];
 
   return (
     <form onSubmit={handleSubmit}>
@@ -79,7 +79,9 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
             type="text"
             className="form-control"
             value={formData.firstName}
-            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, firstName: e.target.value })
+            }
             required
           />
         </div>
@@ -89,7 +91,9 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
             type="text"
             className="form-control"
             value={formData.lastName}
-            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, lastName: e.target.value })
+            }
             required
           />
         </div>
@@ -102,7 +106,9 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
             type="email"
             className="form-control"
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
             required
           />
         </div>
@@ -112,7 +118,9 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
             type="tel"
             className="form-control"
             value={formData.phone}
-            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
             required
           />
         </div>
@@ -124,7 +132,9 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
           className="form-control"
           rows="2"
           value={formData.address}
-          onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+          onChange={(e) =>
+            setFormData({ ...formData, address: e.target.value })
+          }
           required
         ></textarea>
       </div>
@@ -135,7 +145,9 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
           <select
             className="form-select"
             value={formData.state}
-            onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, state: e.target.value })
+            }
             required
           >
             <option value="">Select State</option>
@@ -151,7 +163,9 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
           <select
             className="form-select"
             value={formData.course}
-            onChange={(e) => setFormData({ ...formData, course: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, course: e.target.value })
+            }
             required
           >
             <option value="">Select Course</option>
@@ -170,7 +184,9 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
           type="text"
           className="form-control"
           value={formData.previousEducation}
-          onChange={(e) => setFormData({ ...formData, previousEducation: e.target.value })}
+          onChange={(e) =>
+            setFormData({ ...formData, previousEducation: e.target.value })
+          }
           required
         />
       </div>
@@ -181,19 +197,25 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
           className="form-control"
           rows="3"
           value={formData.message}
-          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          onChange={(e) =>
+            setFormData({ ...formData, message: e.target.value })
+          }
         ></textarea>
       </div>
 
       <div className="mt-4 d-grid">
-        <button 
-          type="submit" 
-          className="btn btn-danger py-2 fw-medium" 
+        <button
+          type="submit"
+          className="btn btn-danger py-2 fw-medium"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
             <>
-              <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+              <span
+                className="spinner-border spinner-border-sm me-2"
+                role="status"
+                aria-hidden="true"
+              ></span>
               Submitting...
             </>
           ) : (
@@ -202,5 +224,5 @@ export default function ApplicationForm({ onSubmit, isSubmitting }) {
         </button>
       </div>
     </form>
-  )
+  );
 }

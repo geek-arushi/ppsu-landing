@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="col-lg-3 col-md-6">
             <div className="d-flex align-items-center mb-3">
               <img 
-                src="/PPSUNAACA+Logo.png" 
+                src="/PPSUNAACALogo.png" 
                 alt="PPSU Logo" 
                 className="me-3" 
                 style={{ height: "50px" }} 
